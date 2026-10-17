@@ -1,39 +1,99 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>冰箱里还有冰糖</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #192323;
-      color: #f3ead8;
-      font-family: system-ui, sans-serif;
-      text-align: center;
-    }
-    main { padding: 24px; }
-    button {
-      padding: 14px 24px;
-      border: 0;
-      border-radius: 12px;
-      background: #edcc92;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
-</head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#202c36"><meta name="description" content="Gigi Room，一間裝著雨聲、冰糖和奇怪聯想的夜間小屋。">
+<title>Gigi Room · 夜裡還亮著</title>
+<style>
+
+:root{--paper:#f0e6cf;--ink:#283b3f;--gold:#e8c58b;--muted:#afbeb9}*{box-sizing:border-box}body{margin:0;background:#1b2832;color:var(--paper);font-family:Georgia,'Noto Serif TC',serif;background-image:radial-gradient(ellipse at 50% 40%,#37494555,transparent 65%)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #e8c58b;outline-offset:5px}header{max-width:1220px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:28px 32px}.brand{font-size:18px;letter-spacing:3px}.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:6px}.ticket{font:11px monospace;letter-spacing:2px;color:#c8d2c8;border:1px solid #5d706e;padding:10px 14px;border-radius:2px}.intro{text-align:center;margin:24px 16px 18px}.intro .eyebrow{color:var(--gold);font:10px monospace;letter-spacing:4px}.intro h1{font-size:clamp(25px,3.2vw,39px);font-weight:400;letter-spacing:6px;margin:13px 0}.intro p{font-size:12px;color:#b8c6c3;letter-spacing:2px;line-height:1.9}.stage{max-width:1060px;margin:0 auto;position:relative;padding:0 20px}.room{position:relative;aspect-ratio:1000/610;filter:drop-shadow(0 25px 40px #0b151b55)}svg{width:100%;height:100%;display:block}.hotspot{position:absolute;background:transparent;border:0;color:#f7ead4;border-radius:12px;display:flex;align-items:flex-end;justify-content:center;padding:0}.hotspot .label{white-space:nowrap;background:#203236e8;border:1px solid #b6c3ac70;border-radius:3px;padding:6px 10px;font-size:11px;letter-spacing:1px;transform:translateY(8px);transition:.25s}.hotspot:hover .label,.hotspot:focus-visible .label{background:#ead5aa;color:#263a3d;transform:translateY(4px)}.hotspot:hover{box-shadow:inset 0 0 35px #f3dc9b22}.window{left:39%;top:16%;width:24%;height:39%}.shelf{left:8%;top:22%;width:23%;height:43%}.fridge{left:77%;top:40%;width:14%;height:39%}.cards{left:38%;top:70%;width:19%;height:15%}.journal{left:57%;top:66%;width:15%;height:18%}.radio{left:66%;top:43%;width:13%;height:20%}.bottom{max-width:980px;margin:22px auto 0;padding:0 24px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#bcc8c2;line-height:1.9}.bottom b{font-weight:400;color:var(--gold)}footer{text-align:center;color:#849b9a;font:10px monospace;letter-spacing:2px;padding:33px 12px}.audio-panel{max-width:650px;margin:28px auto 0;padding:16px 20px;border:1px solid #788e7b55;background:#25383bd9;display:flex;align-items:center;gap:13px;border-radius:5px}.audio-panel button{color:var(--paper);background:#425b58;border:1px solid #7c9180;border-radius:50%;width:38px;height:38px;flex-shrink:0}.audio-name{flex:1;font-size:12px}.audio-name small{display:block;font-size:10px;color:#b7c6bd;margin-top:5px}.audio-panel select{background:#25383b;color:var(--paper);border:1px solid #6c8075;border-radius:3px;padding:6px;font-size:11px}.volume{width:70px;accent-color:#d6bb84}.hint{font-size:10px;color:#a4b9b2;text-align:center;margin:10px}.rain line{animation:fall 1s linear infinite;stroke:#c4d8cf;stroke-opacity:.4;stroke-width:1.5}.rain line:nth-child(3n){animation-delay:-.4s}.rain line:nth-child(2n){animation-delay:-.7s}.rain.hidden{display:none}@keyframes fall{from{transform:translate(10px,-45px)}to{transform:translate(-10px,45px)}}.twinkle{animation:twinkle 5s ease-in-out infinite alternate}@keyframes twinkle{to{opacity:.25}}.steam{animation:steam 4s ease-in-out infinite}@keyframes steam{50%{transform:translateY(-8px);opacity:.3}}.lampglow{animation:glow 6s ease-in-out infinite alternate}@keyframes glow{to{opacity:.65}}dialog{border:1px solid #c2b391;border-radius:7px;background:var(--paper);color:var(--ink);padding:30px;max-width:540px;width:calc(100% - 32px);box-shadow:0 30px 100px #08121699;max-height:85vh;overflow:auto}dialog::backdrop{background:#0d1b24b8;backdrop-filter:blur(5px)}dialog h2{font-size:25px;font-weight:400;margin:8px 0 18px;letter-spacing:2px}dialog p{font-size:14px;line-height:1.9}.close{position:absolute;right:14px;top:12px;background:none;border:0;font-size:25px;color:#5b6b61}.kicker{font:10px monospace;color:#7d7359;letter-spacing:3px}.action{background:#344d48;color:#faf1dd;border:0;padding:10px 16px;border-radius:3px;margin:7px 5px 7px 0;font-size:12px}.secondary{background:transparent;border:1px solid #9caa98;color:#344d48}.note{font-size:11px!important;color:#6e796b;line-height:1.7}textarea,input[type=text]{width:100%;padding:12px;border:1px solid #b1b7a1;border-radius:3px;background:#fff9e9;color:#283b3f}textarea{min-height:125px;resize:vertical;line-height:1.7}.items{list-style:none;padding:0}.items li{padding:12px 0;border-bottom:1px solid #b5b59d;display:flex;gap:12px;align-items:center;font-size:14px}.items li span{flex:1;white-space:pre-wrap;overflow-wrap:anywhere}.remove{border:0;background:none;color:#7b6055;font-size:12px}.quote{font-size:20px!important;line-height:1.8!important;padding:15px 0;min-height:110px}.status{color:#557363;font-size:12px;min-height:20px}.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:#f0e6cf;color:#283b3f;padding:13px 22px;border-radius:4px;font-size:13px;z-index:4;box-shadow:0 8px 40px #0005;pointer-events:none;opacity:0;transition:opacity .3s;max-width:90vw;text-align:center}.toast.show{opacity:1}
+@media(max-width:650px){header{padding:20px}.ticket{font-size:8px;padding:8px}.intro{margin-top:28px}.intro h1{letter-spacing:3px}.intro p{font-size:11px;letter-spacing:1px}.stage{padding:0 5px}.hotspot .label{font-size:10px;padding:5px 6px;letter-spacing:0}.bottom{font-size:10px;margin-top:26px}.audio-panel{margin:25px 16px 0;padding:13px;gap:8px;flex-wrap:wrap}.audio-name{min-width:130px}.volume{width:60px}.room{margin-top:16px}.intro .eyebrow{font-size:9px}.audio-panel select{max-width:110px}footer{font-size:8px;letter-spacing:1px}}@media(prefers-reduced-motion:reduce){*,.rain line{animation:none!important;transition:none!important}}
+</style></head>
 <body>
-  <main>
-    <p>🌙 夜里还亮着</p >
-    <h1>冰箱里还有冰糖</h1>
-    <p>欢迎来我的脑子里坐一会儿。</p >
-    <button onclick="this.textContent='🍬 找到了，分你一颗。'">
-      打开冰箱
-    </button>
-  </main>
-</body>
-</html>
+<header><div class="brand">GIGI ROOM<small>A SMALL WORLD, STILL AWAKE.</small></div><div class="ticket">ROOM 03 · OPEN LATE</div></header>
+<main><div class="intro"><div class="eyebrow">AN UNFINISHED LITTLE UNIVERSE</div><h1>夜裡還亮著</h1><p>冰箱裡有冰糖，窗外有雨。<br>其餘的事，等一下再想。</p></div>
+<div class="stage"><div class="room">
+<svg viewBox="0 0 1000 610" role="img" aria-labelledby="roomTitle"><title id="roomTitle">暖燈下的像素魔法小屋，有書架、雨窗、收音機、冰箱和擺著紙牌與筆記本的桌子。</title>
+<defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#465856"/><stop offset="1" stop-color="#314743"/></linearGradient><linearGradient id="night" x2="0" y2="1"><stop stop-color="#16263d"/><stop offset="1" stop-color="#526b70"/></linearGradient><linearGradient id="wood" x2="0" y2="1"><stop stop-color="#9c7d5d"/><stop offset="1" stop-color="#715a49"/></linearGradient><radialGradient id="light"><stop stop-color="#f8da8b" stop-opacity=".25"/><stop offset="1" stop-color="#f8da8b" stop-opacity="0"/></radialGradient><pattern id="paper" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".6" fill="#fff" opacity=".09"/></pattern><clipPath id="glass"><rect x="403" y="108" width="208" height="211"/></clipPath><pattern id="floor" width="110" height="44" patternUnits="userSpaceOnUse"><path d="M0 0H110V44H0Z" fill="#7a6855" stroke="#4e5047" stroke-width="2"/><path d="M12 12h54m-35 15h60" stroke="#bca17a" opacity=".15"/></pattern></defs>
+<!-- architecture -->
+<path d="M65 80L932 80L960 492L50 492Z" fill="#182e31"/><path d="M80 87H922V448H80Z" fill="url(#wall)" stroke="#8e9b83" stroke-width="3"/><path d="M80 448H922L985 574H20Z" fill="url(#floor)" stroke="#283b39" stroke-width="4"/><path d="M80 431H922V450H80Z" fill="#263b37" stroke="#829077" stroke-width="2"/><path d="M80 95H922" stroke="#b9ba96" opacity=".35"/><path d="M95 102V429M908 102V429" stroke="#7b8b72" opacity=".3"/>
+<rect x="80" y="87" width="842" height="360" fill="url(#paper)"/>
+<!-- a small moon chart -->
+<path d="M318 135l45 4-5 83-48-5Z" fill="#b6b895" stroke="#253d37" stroke-width="4"/><circle cx="337" cy="169" r="14" fill="#334b48"/><circle cx="344" cy="164" r="12" fill="#b6b895"/><path d="M320 196l27 2m-25 7 19 2" stroke="#677966" stroke-width="2"/>
+<!-- window -->
+<rect x="386" y="91" width="242" height="245" fill="#223934" stroke="#9b8d6d" stroke-width="5"/><rect x="403" y="108" width="208" height="211" fill="url(#night)"/>
+<g clip-path="url(#glass)"><circle cx="559" cy="145" r="20" fill="#e5d9b0"/><circle cx="569" cy="138" r="19" fill="#263b50"/><g fill="#cbd7bc" class="twinkle"><rect x="431" y="139" width="3" height="3"/><rect x="486" y="122" width="4" height="4"/><rect x="594" y="192" width="3" height="3"/><rect x="470" y="189" width="2" height="2"/><rect x="526" y="167" width="3" height="3"/></g><path d="M390 285l39-52 44 50 39-26 46 33 38-65 36 61V330H390Z" fill="#29433e"/><path d="M400 313l52-32 48 30 37-18 37 21 49-34v50H400Z" fill="#203b36"/><g class="rain" id="rain"></g><path d="M419 124l42 0-42 85Z" fill="#d5e2d2" opacity=".04"/></g>
+<path d="M507 105V321M402 214H613" stroke="#9c8c6a" stroke-width="7"/><path d="M381 331H634V344H381Z" fill="#b39c73" stroke="#293e36" stroke-width="3"/>
+<!-- curtains -->
+<path d="M374 92h34l-12 106-17 91-17 4 16-104Z" fill="#a59b77"/><path d="M610 92h31l1 111 16 90-18-1-21-90Z" fill="#a59b77"/><path d="M384 101l-5 89m12-88-4 95m242-94 7 93" stroke="#d2c29a" opacity=".45" stroke-width="3"/>
+<!-- shelf -->
+<path d="M112 160H292V393H112Z" fill="#233a32" stroke="#a68b62" stroke-width="7"/><path d="M109 227H297M109 309H297M109 391H297" stroke="#a68b62" stroke-width="8"/>
+<g stroke="#263e35" stroke-width="2"><path d="M125 179h21v44h-21Z" fill="#c1a47d"/><path d="M148 171h15v52h-15Z" fill="#8a9d83"/><path d="M166 181h25v42h-25Z" fill="#c4876d"/><path d="M194 166h17v57h-17Z" fill="#d5c08b"/><path d="M215 178l16-5 13 45-16 5Z" fill="#7b9694"/><path d="M248 187h24v36h-24Z" fill="#9c8581"/><path d="M122 259h16v46h-16Z" fill="#a67862"/><path d="M141 249h23v56h-23Z" fill="#82998b"/><path d="M168 257h18v48h-18Z" fill="#d1b47e"/><path d="M191 266h21v39h-21Z" fill="#a8a577"/><path d="M219 251h15v54h-15Z" fill="#be9179"/></g>
+<g stroke="#e8d9ac" opacity=".5"><path d="M129 189h12m11-7h8m11 8h15m12-12h9m-80 92h8m13-9h15m17 9h10"/></g>
+<!-- shelf curios: cat and jar -->
+<path d="M248 305v-27l-2-15 12 7 13-6-1 16v25Z" fill="#202e2d"/><circle cx="254" cy="281" r="2" fill="#e6ca8b"/><circle cx="264" cy="281" r="2" fill="#e6ca8b"/><path d="M137 385v-29q0-20 17-20t17 20v29Z" fill="#829b8866" stroke="#bdc39b" stroke-width="2"/><path d="M149 368h10v10h-10Z" fill="#e4d291"/><path d="M143 334h23" stroke="#bb9a70" stroke-width="5"/><path d="M192 372h77v12h-77Zm8-13h62v11h-62Z" fill="#b4a17d" stroke="#263b33" stroke-width="2"/>
+<!-- overhead cable & light -->
+<path d="M80 95Q221 138 386 91M630 91Q774 147 921 94" fill="none" stroke="#1b302e" stroke-width="3"/><g fill="#e9ce8b"><rect x="124" y="106" width="5" height="8"/><rect x="182" y="116" width="5" height="8"/><rect x="251" y="114" width="5" height="8"/><rect x="319" y="104" width="5" height="8"/><rect x="684" y="105" width="5" height="8"/><rect x="752" y="115" width="5" height="8"/><rect x="816" y="113" width="5" height="8"/><rect x="881" y="102" width="5" height="8"/></g>
+<!-- radio table -->
+<path d="M659 358h121v15H659Zm13 15v70m96-70v70" fill="#a18760" stroke="#293e34" stroke-width="5"/><rect x="670" y="286" width="99" height="70" rx="7" fill="#aa8b62" stroke="#263c32" stroke-width="5"/><path d="M686 286v-10h47v10" fill="none" stroke="#b8ae88" stroke-width="4"/><path d="M750 283l21-60" stroke="#aab9a1" stroke-width="3"/><rect x="680" y="298" width="48" height="46" rx="4" fill="#405049"/><path d="M686 308h35m-35 8h35m-35 8h35m-35 8h35" stroke="#b2a382" stroke-width="2"/><circle cx="746" cy="329" r="9" fill="#e3ca92" stroke="#3f5043" stroke-width="3"/><rect id="radioLight" x="738" y="301" width="17" height="5" fill="#758e73"/>
+<!-- plant -->
+<path d="M726 430l8 40h36l7-40Z" fill="#bb8769" stroke="#2a4034" stroke-width="3"/><path d="M751 436v-63m0 40q-35 0-30-26 29-1 30 26m0-4q34-6 28-29-26 3-28 29m0-24q-24-14-15-31 24 9 15 31" fill="#8b9d70" stroke="#355342" stroke-width="3"/>
+<!-- fridge -->
+<path d="M793 273h105v207H793Z" fill="#8faaa1" stroke="#203b35" stroke-width="5"/><path d="M799 280h91v60h-91Z" fill="#adc0ac"/><path d="M795 349h101M810 301v23m0 43v39" stroke="#3d6154" stroke-width="5"/><path d="M814 479v10m66-10v10" stroke="#263c34" stroke-width="7"/><path d="M839 369l32-4 4 41-32 2Z" fill="#ecddaf"/><rect x="846" y="363" width="12" height="9" fill="#bd785e"/><path d="M849 381l18-2m-17 9 13-1" stroke="#a39976" stroke-width="2"/><path d="M828 262q-10-31 10-33 18 3 9 33Z" fill="#c8b785"/><path d="M840 236q-8-18 9-23" fill="none" stroke="#8ba078" stroke-width="4"/>
+<!-- rug -->
+<path d="M273 474H697L754 553H215Z" fill="#a28775" stroke="#b8a688" stroke-width="3"/><path d="M292 486H683L722 540H248Z" fill="#536863" stroke="#d1ba8c" stroke-width="2"/><path d="M314 495h347l21 34H289Z" fill="none" stroke="#93a28b" stroke-dasharray="5 6"/>
+<!-- floor lamp -->
+<ellipse cx="345" cy="316" rx="150" ry="185" fill="url(#light)" class="lampglow"/><path d="M333 303v166m-27 4h54" stroke="#c5b17e" stroke-width="6"/><path d="M305 244h55l19 58h-92Z" fill="#e2c48b" stroke="#36483a" stroke-width="3"/><path d="M316 249l-8 45m38-45 9 45" stroke="#b69b68" opacity=".7" stroke-width="2"/>
+<!-- low desk -->
+<path d="M361 430h327l20 41H341Z" fill="#a58a66" stroke="#293d34" stroke-width="4"/><path d="M348 471h352v13H348Zm12 13v51m327-51v51" fill="#715f4b" stroke="#293d34" stroke-width="5"/><path d="M367 443h129m-95 17h162m40-17h65" stroke="#d2b185" opacity=".35" stroke-width="2"/>
+<!-- cards -->
+<path d="M414 434l43-8 15 33-44 8Z" fill="#d7c59b" stroke="#385044" stroke-width="2"/><path d="M442 429l42 3-4 36-43-5Z" fill="#475d57" stroke="#d8c193" stroke-width="2"/><path d="M458 440l8 7-8 9-7-9Z" fill="#d8c193"/>
+<!-- diary -->
+<path d="M578 424q22-9 42 0 20-7 41 0l9 35q-23-6-46 0-24-6-48 0Z" fill="#e6d7af" stroke="#3b5141" stroke-width="2"/><path d="M620 425l4 33m-36-25 22 1m-20 6 21 1m-19 6 21 1m18-15 22-2m-21 9 23-2m-21 9 22-2" stroke="#acaa87" stroke-width="1.5"/><path d="M659 416l-7 34" stroke="#5c7261" stroke-width="4"/>
+<!-- cup -->
+<path d="M517 419h24v24h-24Z" fill="#b7c6ae" stroke="#3a5041" stroke-width="2"/><path d="M541 424q16-1 8 13h-8" fill="none" stroke="#b7c6ae" stroke-width="4"/><path d="M525 413q-8-9 0-16m8 16q8-10 0-17" fill="none" stroke="#d0d6b0" stroke-width="2" opacity=".6" class="steam"/>
+<!-- pixel dust -->
+<g fill="#e2cd93" opacity=".65" class="twinkle"><rect x="355" y="201" width="3" height="3"/><rect x="656" y="240" width="4" height="4"/><rect x="701" y="169" width="3" height="3"/><rect x="301" y="335" width="3" height="3"/><rect x="884" y="238" width="3" height="3"/></g>
+</svg>
+<button class="hotspot shelf" data-open="books" aria-label="打開書架"><span class="label">01 / 書架</span></button>
+<button class="hotspot window" id="weather" aria-label="切換雨夜與晴夜"><span class="label" id="weatherLabel">02 / 雨夜窗戶</span></button>
+<button class="hotspot radio" id="radioOpen" aria-label="調整收音機"><span class="label">03 / 收音機</span></button>
+<button class="hotspot fridge" id="candy" aria-label="打開冰箱拿冰糖"><span class="label">04 / 冰箱</span></button>
+<button class="hotspot cards" data-open="cards"><span class="label">05 / 腦洞紙牌</span></button>
+<button class="hotspot journal" data-open="journal"><span class="label">06 / 夢境手記</span></button>
+</div></div>
+<div class="bottom"><span><b>探索提示</b><br>點一件物品。沒有任務，也沒有倒數。</span><span style="text-align:right">今晚的房客<br>一個還不想睡的好奇心。</span></div>
+<section class="audio-panel" id="audioPanel" aria-label="背景聲音控制"><button id="play" aria-label="播放背景聲音" aria-pressed="false">▶</button><div class="audio-name">窗邊頻道 · 雨落在別的地方<small id="audioStatus" aria-live="polite">點擊播放，讓房間有一點聲音。</small></div><select id="soundMode" aria-label="背景聲音類型"><option value="both">雨聲 ＋ 琴音</option><option value="rain">只有雨聲</option><option value="music">只有琴音</option></select><input class="volume" id="volume" type="range" min="0" max="100" value="35" aria-label="音量"></section>
+<p class="hint">沒有歌詞，沒有突然的音效。晴雨畫面與聲音可以分開選。</p>
+</main><footer>GIGI ROOM / 請隨意停留，冰糖不用客氣。</footer>
+<dialog id="books"><button class="close" aria-label="關閉">×</button><div class="kicker">01 / THE SMALL SHELF</div><h2>喜歡的東西，先放這裡</h2><p>一本書、一部電影、一個角色，甚至一個還沒想明白的問題。</p><ul class="items" id="bookList"></ul><form id="bookForm"><input id="bookInput" type="text" maxlength="100" placeholder="例如：宮崎駿電影裡那些可以住進去的房間" aria-label="添加收藏" required><button class="action" type="submit">放進書架 ＋</button></form><p class="note">收藏只保存在這個瀏覽器。換裝置不會同步，清除網站資料也會移除。</p></dialog>
+<dialog id="cards"><button class="close" aria-label="關閉">×</button><div class="kicker">05 / A STRANGE LITTLE QUESTION</div><h2>給好奇心一張紙牌</h2><p class="quote" id="promptText"></p><button class="action" id="draw">再抽一張 ↗</button><button class="action secondary" id="keepPrompt">帶去手記裡寫</button><p class="note">可以認真想，也可以只說一句：「這什麼問題。」</p></dialog>
+<dialog id="journal"><button class="close" aria-label="關閉">×</button><div class="kicker">06 / NOTES FROM ELSEWHERE</div><h2>夢醒前，記下一點</h2><p>空間的形狀、夢裡的路，或者今天冒出來的怪念頭。</p><textarea id="noteInput" maxlength="5000" aria-label="手記內容" placeholder="那間房間有兩扇窗，但窗外不是同一個季節……"></textarea><button class="action" id="saveNote">收進抽屜</button><button class="action secondary" id="exportNote">匯出手記 .txt</button><div class="status" id="saveStatus" aria-live="polite"></div><p class="note">這是瀏覽器本機手記，不會上傳。寫完請按「收進抽屜」；重要內容記得匯出備份。</p></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+const $=s=>document.querySelector(s);let toastTimer,returnFocus;
+function toast(s){$('#toast').textContent=s;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3800)}
+function openDialog(id){returnFocus=document.activeElement;$('#'+id).showModal()}
+document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>openDialog(b.dataset.open));
+document.querySelectorAll('dialog').forEach(d=>{d.querySelector('.close').onclick=()=>d.close();d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});d.addEventListener('close',()=>returnFocus?.focus())});
+const rain=$('#rain');for(let i=0;i<36;i++){const l=document.createElementNS('http://www.w3.org/2000/svg','line'),x=405+(i*47)%205,y=105+(i*59)%240;l.setAttribute('x1',x);l.setAttribute('y1',y);l.setAttribute('x2',x-8);l.setAttribute('y2',y+23);rain.append(l)}
+let wet=true;$('#weather').onclick=()=>{wet=!wet;rain.classList.toggle('hidden',!wet);$('#weatherLabel').textContent=wet?'02 / 雨夜窗戶':'02 / 晴夜窗戶';toast(wet?'窗外又下雨了。':'雲散了一點，月亮還在。')};
+let sweets=0;const candyLines=['找到一顆冰糖。今晚先甜一點。','又一顆。小時候的你應該會很滿意。','冰箱的燈，像一個小小的月亮。','沒有大人在旁邊說「只能拿一顆」。','最後面還藏著一顆。這是秘密。'];$('#candy').onclick=()=>{toast(candyLines[sweets%candyLines.length]);sweets++};
+function read(key,fallback){try{const v=localStorage.getItem(key);return v===null?fallback:JSON.parse(v)}catch{return fallback}}
+function write(key,value){try{localStorage.setItem(key,JSON.stringify(value));return true}catch{toast('瀏覽器暫時無法儲存，請匯出備份。');return false}}
+let books=read('gigi.books.v1',['宮崎駿電影裡的房間','怪談為什麼讓人害怕，又想看下去？','日常物件也可以是故事的入口']);if(!Array.isArray(books))books=[];books=books.filter(x=>typeof x==='string');
+function renderBooks(){const list=$('#bookList');list.replaceChildren();books.forEach((name,i)=>{const li=document.createElement('li'),span=document.createElement('span'),b=document.createElement('button');span.textContent=name;b.textContent='移走';b.className='remove';b.setAttribute('aria-label','移走 '+name);b.onclick=()=>{books.splice(i,1);write('gigi.books.v1',books);renderBooks()};li.append(span,b);list.append(li)})}renderBooks();$('#bookForm').onsubmit=e=>{e.preventDefault();const v=$('#bookInput').value.trim();if(!v)return;books.push(v);write('gigi.books.v1',books);renderBooks();$('#bookInput').value=''};
+const prompts=['如果你夢裡的一間房可以搬到現實，你會帶走哪一間？','如果鏡子映出的不是外貌，而是今天的注意力，它會長什麼樣？','給一棵樹安排一份只有晚上才上班的工作。','一班地鐵的終點站叫「暫時不用努力」。下車後有什麼？','如果童年的你來這間房，第一件會摸的東西是什麼？','有人寄來一封信，信封裡只有一種氣味。故事從哪裡開始？','挑一件最普通的物件，讓它成為一個怪談的唯一證據。','你可以為一段記憶重新配色，會選哪一段？','如果一本書記得每位讀者，它最想忘記什麼？','如果好奇心是一種動物，它今晚躲在哪裡？','設計一個不靠嚇人，卻讓人不敢關燈的故事。','把「不想回訊息」設計成一種魔法，代價會是什麼？'];let last=-1;function draw(){let n;do{n=Math.floor(Math.random()*prompts.length)}while(n===last);last=n;$('#promptText').textContent=prompts[n]}draw();$('#draw').onclick=draw;
+const savedNote=read('gigi.note.v1','');$('#noteInput').value=typeof savedNote==='string'?savedNote:'';$('#keepPrompt').onclick=()=>{const input=$('#noteInput'),addition='【'+prompts[last]+'】\n';if(input.value.length+addition.length+2>5000){toast('手記寫滿了，先匯出整理一下。');return}input.value+=(input.value?'\n\n':'')+addition;$('#cards').close();openDialog('journal');input.focus()};
+$('#noteInput').oninput=()=>$('#saveStatus').textContent='還有未儲存的內容。';$('#saveNote').onclick=()=>{if(write('gigi.note.v1',$('#noteInput').value))$('#saveStatus').textContent='已收好 · '+new Date().toLocaleTimeString('zh-HK',{hour:'2-digit',minute:'2-digit'})};$('#exportNote').onclick=()=>{const b=new Blob(['Gigi Room · 夢境手記\n\n'+$('#noteInput').value],{type:'text/plain;charset=utf-8'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='Gigi-Room-Notes.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500)};
+// Original generative pentatonic ambient sound. No recordings or remote audio files.
+let ctx,master,rainGain,musicGain,rainSource,timer,playing=false,step=0;const melody=[0,4,7,11,9,4,2,7,12,9,7,4,2,0,7,4];
+function initAudio(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw Error('unsupported');ctx=new AC();master=ctx.createGain();master.gain.value=0;master.connect(ctx.destination);rainGain=ctx.createGain();musicGain=ctx.createGain();rainGain.connect(master);musicGain.connect(master);
+const buffer=ctx.createBuffer(1,ctx.sampleRate*9,ctx.sampleRate),data=buffer.getChannelData(0);let brown=0;for(let i=0;i<data.length;i++){brown=(brown+Math.random()*.04-.02)/1.02;data[i]=brown*3.5+(Math.random()*2-1)*.1}rainSource=ctx.createBufferSource();rainSource.buffer=buffer;rainSource.loop=true;const filter=ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=2300;rainSource.connect(filter);filter.connect(rainGain);rainSource.start();applyMode()}
+function applyMode(){if(!ctx)return;const mode=$('#soundMode').value,t=ctx.currentTime;rainGain.gain.setTargetAtTime(mode==='music'?0:.4,t,.25);musicGain.gain.setTargetAtTime(mode==='rain'?0:.22,t,.25)}
+function note(freq,when,strength=1){const osc=ctx.createOscillator(),g=ctx.createGain();osc.type='sine';osc.frequency.value=freq;g.gain.setValueAtTime(0,when);g.gain.linearRampToValueAtTime(.15*strength,when+.035);g.gain.exponentialRampToValueAtTime(.0001,when+5);osc.connect(g);g.connect(musicGain);osc.start(when);osc.stop(when+5.2);osc.onended=()=>{osc.disconnect();g.disconnect()}}
+function phrase(){if(!playing)return;const t=ctx.currentTime;note(220*Math.pow(2,melody[step%melody.length]/12),t);if(step%4===0){note(110,t,.7);note(164.8138,t+.3,.45)}step++;timer=setTimeout(phrase,2500+Math.random()*600)}
+async function toggleAudio(){try{if(!ctx)initAudio();if(playing){playing=false;clearTimeout(timer);master.gain.cancelScheduledValues(ctx.currentTime);master.gain.setTargetAtTime(0,ctx.currentTime,.1);setTimeout(()=>{if(!playing)ctx.suspend().catch(()=>{})},450)}else{await ctx.resume();playing=true;master.gain.setTargetAtTime(Number($('#volume').value)/100,ctx.currentTime,.2);phrase()}$('#play').textContent=playing?'Ⅱ':'▶';$('#play').setAttribute('aria-pressed',String(playing));$('#play').setAttribute('aria-label',playing?'暫停背景聲音':'播放背景聲音');$('#audioStatus').textContent=playing?'正在播放 · 給夜晚留一點空白。':'聲音暫停了，房間還在。';$('#radioLight').setAttribute('fill',playing?'#efd295':'#758e73')}catch{playing=false;$('#audioStatus').textContent='聲音暫時無法啟動，請再點一次或換瀏覽器。'}}
+$('#play').onclick=toggleAudio;$('#soundMode').onchange=applyMode;$('#volume').oninput=()=>{if(master&&playing)master.gain.setTargetAtTime(Number($('#volume').value)/100,ctx.currentTime,.1)};$('#radioOpen').onclick=()=>{$('#audioPanel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});$('#play').focus({preventScroll:true});toast('收音機在這裡。按 ▶ 開啟窗邊頻道。')};
+</script></body></html>
